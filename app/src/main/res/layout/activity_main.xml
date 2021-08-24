@@ -1,7 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:layout_gravity="center"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/helvetica_light"
+            android:text="Bulutlu"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="135dp"
+            tools:layout_editor_absoluteY="102dp">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            app:srcCompat="@drawable/cloud"
+            tools:layout_editor_absoluteX="197dp"
+            tools:layout_editor_absoluteY="89dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/helvetica_compressed"
+        android:text="35°"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="96sp"
+        >
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:text="Manisa"
+        android:fontFamily="@font/helvetica_light"
+        android:textColor="@color/white"
+        android:textSize="28sp">
+
+    </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="424dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/helvetica"
+                android:layout_marginEnd="75dp"
+                android:layout_weight="1"
+                android:text="Çarşamba"
+                android:textColor="@color/white"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:text="27°"
+                android:textColor="@color/white"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                app:srcCompat="@drawable/sun" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="474dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/helvetica"
+                android:layout_marginEnd="75dp"
+                android:layout_weight="1"
+                android:text="Perşembe"
+                android:textColor="@color/white"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:text="30°"
+                android:textColor="@color/white"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                app:srcCompat="@drawable/sun"
+                tools:layout_editor_absoluteX="284dp"
+                tools:layout_editor_absoluteY="439dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="523dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/helvetica"
+                android:text="Cuma"
+                android:textColor="@color/white"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                android:layout_marginEnd="10dp"
+                android:text="25°"
+                android:textColor="@color/white"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                app:srcCompat="@drawable/sun" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="474dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="75dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/helvetica"
+                android:text="Cumartesi"
+                android:textColor="@color/white"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:text="29°"
+                android:textColor="@color/white"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                app:srcCompat="@drawable/sun"
+                tools:layout_editor_absoluteX="284dp"
+                tools:layout_editor_absoluteY="439dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
