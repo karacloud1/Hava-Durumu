@@ -6,6 +6,7 @@ kekod ui challenge için tasarlandı.
 
 <br>
 Güncellenmiş Hali <br>
-![Animation](https://user-images.githubusercontent.com/83123957/134706805-9bec674a-8b66-4877-8d8f-046c55ae72e8.gif)
+![Animation](https://user-images.githubusercontent.com/83123957/134707113-aa233c98-06ef-4dea-8ebd-995b75f90c51.gif)
+
 
 
