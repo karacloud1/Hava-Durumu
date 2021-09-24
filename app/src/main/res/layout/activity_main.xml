@@ -1,252 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:layout_gravity="center"
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center"
     android:gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/tokyo"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    >
-
-    <LinearLayout
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/helvetica_light"
-            android:text="Bulutlu"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            tools:layout_editor_absoluteX="135dp"
-            tools:layout_editor_absoluteY="102dp">
-
-        </TextView>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="7dp"
-            app:srcCompat="@drawable/cloud"
-            tools:layout_editor_absoluteX="197dp"
-            tools:layout_editor_absoluteY="89dp" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <TextView
+        android:id="@+id/tvCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="1dp"
-        android:fontFamily="@font/helvetica_compressed"
-        android:text="35°"
-        android:textAlignment="center"
+        android:text="@string/tokyo"
+        android:textSize="64sp"
+        android:fontFamily="@font/helvetica_bold"
         android:textColor="@color/white"
-        android:textSize="96sp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         >
-
     </TextView>
 
     <TextView
+        android:id="@+id/tvWeatherDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="1dp"
-        android:text="Manisa"
+        android:fontFamily="@font/helvetica_light"
+        android:text="@string/raining"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/tvCity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="40dp"
+        tools:layout_editor_absoluteX="16dp">
+    </TextView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_rawRes="@raw/rain"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWeatherDescription"
+        >
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <TextView
+        android:id="@+id/tvWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weather"
         android:fontFamily="@font/helvetica_light"
         android:textColor="@color/white"
-        android:textSize="28sp">
-
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/lottie"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="40dp"
+        >
     </TextView>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="300dp"
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
-        android:orientation="vertical">
+        android:text="@string/temperature1"
+        android:fontFamily="@font/helvetica_bold"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintTop_toBottomOf="@id/tvWeather"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="40dp"
+        >
+    </TextView>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/temperatureSign"
+        android:fontFamily="@font/helvetica_bold"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintTop_toBottomOf="@id/tvWeather"
+        app:layout_constraintLeft_toRightOf="@id/tvTemperature"
+        >
+    </TextView>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="72dp"
-            tools:layout_editor_absoluteY="424dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/helvetica"
-                android:layout_marginEnd="75dp"
-                android:layout_weight="1"
-                android:text="Çarşamba"
-                android:textColor="@color/white"
-                android:textSize="24sp">
-
-            </TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginEnd="10dp"
-                android:text="27°"
-                android:textColor="@color/white"
-                android:textSize="24sp">
-
-            </TextView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="7dp"
-                app:srcCompat="@drawable/sun" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="73dp"
-            tools:layout_editor_absoluteY="474dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/helvetica"
-                android:layout_marginEnd="75dp"
-                android:layout_weight="1"
-                android:text="Perşembe"
-                android:textColor="@color/white"
-                android:textSize="24sp">
-
-            </TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginEnd="10dp"
-                android:text="30°"
-                android:textColor="@color/white"
-                android:textSize="24sp">
-
-            </TextView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="7dp"
-                app:srcCompat="@drawable/sun"
-                tools:layout_editor_absoluteX="284dp"
-                tools:layout_editor_absoluteY="439dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="95dp"
-            tools:layout_editor_absoluteY="523dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:fontFamily="@font/helvetica"
-                android:text="Cuma"
-                android:textColor="@color/white"
-                android:textSize="24sp">
-
-            </TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="7dp"
-                android:layout_marginEnd="10dp"
-                android:text="25°"
-                android:textColor="@color/white"
-                android:textSize="24sp">
-
-            </TextView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="7dp"
-                app:srcCompat="@drawable/sun" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="73dp"
-            tools:layout_editor_absoluteY="474dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginEnd="75dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/helvetica"
-                android:text="Cumartesi"
-                android:textColor="@color/white"
-                android:textSize="24sp">
-
-            </TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginEnd="10dp"
-                android:text="29°"
-                android:textColor="@color/white"
-                android:textSize="24sp">
-
-            </TextView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="7dp"
-                app:srcCompat="@drawable/sun"
-                tools:layout_editor_absoluteX="284dp"
-                tools:layout_editor_absoluteY="439dp" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

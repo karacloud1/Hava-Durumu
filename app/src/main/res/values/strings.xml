@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">kekod_challenge</string>
+    <string name="tokyo">TOKYO</string>
+    <string name="weather">Weather</string>
+    <string name="temperature1">28</string>
+    <string name="temperatureSign">°</string>
+    <string name="raining">It\'s\nraining\nnow</string>
 </resources>
